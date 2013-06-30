@@ -1,0 +1,20 @@
+# HG changeset patch
+# Parent 70c9f99b8918262d283862bc3a8fcf24a2ef03da
+Comment out the cgo message
+
+diff -r 70c9f99b8918 -r d7b42b9eb2b3 src/cmd/go/build.go
+--- a/src/cmd/go/build.go	Sun Jun 30 16:43:13 2013 +0200
++++ b/src/cmd/go/build.go	Sun Jun 30 16:52:56 2013 +0200
+@@ -1864,9 +1864,9 @@
+ )
+ 
+ func (b *builder) cgo(p *Package, cgoExe, obj string, gccfiles []string, gxxfiles []string) (outGo, outObj []string, err error) {
+-	if goos != toolGOOS {
+-		return nil, nil, errors.New("cannot use cgo when compiling for a different operating system")
+-	}
++	// if goos != toolGOOS {
++	// 	return nil, nil, errors.New("cannot use cgo when compiling for a different operating system")
++	// }
+ 
+ 	cgoCPPFLAGS := stringList(envList("CGO_CPPFLAGS"), p.CgoCPPFLAGS)
+ 	cgoCFLAGS := stringList(envList("CGO_CFLAGS"), p.CgoCFLAGS)
