@@ -4,3 +4,4 @@ shared-lib
 shared-lib-runtime
 android-tls
 android-build-hacks
+darwin_android_cgo
