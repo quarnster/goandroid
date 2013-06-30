@@ -17,7 +17,7 @@ This guide assumes you're running linux and have an android device connected thr
 
 	`$NDK/build/tools/make-standalone-toolchain.sh --platform=android-9 --install-dir=ndk-toolchain`
 
-	You might need to add `--system=linux-x86_64` or `--system=darwin-x86_64` depending on your system.
+	You might need to add `--system=linux-x86_64` or `--system=darwin-x86_64` as well as `--toolchain=arm-linux-androideabi-4.4.3` depending on your system.
 
 	Set `$NDK_TOOLCHAIN` to point at the `ndk-toolchain` directory
 
