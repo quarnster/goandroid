@@ -3092,7 +3092,7 @@ diff -r 5e5f1624464b src/cmd/dist/buildruntime.c
 +		"//	cgo/gcc_darwin_amd64.c:/^threadentry\n"
 +		"//\n"
 +		"#define	get_tls(r)\n"
-+		"#define	g(r) 0(GS))\n"
++		"#define	g(r) 0(GS)\n"
 +		"#define	m(r) 8(GS)\n"
 +	},
 +	// The TLS accessors here are defined here to use initial exec model.
